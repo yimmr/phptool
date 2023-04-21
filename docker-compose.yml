@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+    php:
+        restart: on-failure
+        image: yimmr/php:7.4-apache-dev
+        volumes:
+            - .:/var/www/html
+        ports:
+            - 8802:80
+volumes:
+    dbdata: null
